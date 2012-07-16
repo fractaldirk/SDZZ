@@ -3,7 +3,9 @@ SDZZ::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :posts
+  resources :posts do
+  	resources :comments
+  end
 
   resources :home
   # The priority is based upon order of creation:

@@ -38,3 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'omniauth-facebook'
+gem 'koala'
+gem 'delayed_job_active_record'

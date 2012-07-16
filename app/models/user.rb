@@ -9,4 +9,21 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  def self.share_review(user_id, post_url)
+    user = User.find(user_id)
+    user.facebook.put_connections("me", "talentjes:comment", blog: post_url)
+  end
+
+  def facebook
+    @facebook ||= Koala::Facebook::API.new(oauth_token)
+    block_given? ? yield(@facebook) : @facebook
+  rescue Koala::Facebook::APIError => e
+    logger.info e.to_s
+    nil # or consider a custom null object
+  end
+
+  def friends_count
+  facebook { |fb| fb.get_connection("me", "friends").size }
+  end
 end

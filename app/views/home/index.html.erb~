@@ -1,3 +1,8 @@
 <h1>Hello World!</h1>
+<% if current_user %>
+  Number of friends: <%= current_user.friends_count %>
+<% end %>
+<br />
 
-<%= link_to "Nieuws", @post %>
+
+<%= link_to "Nieuws", posts_path %>

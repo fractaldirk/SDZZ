@@ -1,7 +1,7 @@
 <% content_for :head do %>
   <%= tag :meta, property: "fb:app_id", content: "477453758950604" %>
   <%= tag :meta, property: "og:site_name", content: "Talentjes" %>
-  <%= tag :meta, property: "og:type", content: "talentjes:blog" %>
+  <%= tag :meta, property: "og:type", content: "talentjes:movie" %>
   <%= tag :meta, property: "og:title", content: @post.name %>
   <%= tag :meta, property: "og:url", content: post_url(@post) %>
   <%= tag :meta, property: "og:image", content: "https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png" %>

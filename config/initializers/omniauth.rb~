@@ -1,11 +1,7 @@
 OmniAuth.config.logger = Rails.logger
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :facebook, '477453758950604', 'e3af8d7eba551f35622323a3af4cde59'
+  provider :facebook, '477453758950604', 'e3af8d7eba551f35622323a3af4cde59',
 end
 
-Omniauth.config do |config|
-  config.on_failure do
-    # your handling code invoked in the context of a rack app
-  end
-end
+
