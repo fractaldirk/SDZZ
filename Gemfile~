@@ -39,3 +39,4 @@ gem 'jquery-rails'
 
 gem 'omniauth-facebook'
 gem 'koala'
+gem 'delayed_job_active_record'
