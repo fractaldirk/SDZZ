@@ -50,3 +50,6 @@ gem 'jquery-rails'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'delayed_job_active_record'
+# For uploading pictures cast number 253
+gem "rmagick"
+gem "carrierwave"

@@ -30,7 +30,6 @@ gem 'capybara'
 gem 'database_cleaner'
 end
 
-
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -51,3 +50,5 @@ gem 'jquery-rails'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'delayed_job_active_record'
+# For uploading pictures cast number 253
+gem "carrierwave"
