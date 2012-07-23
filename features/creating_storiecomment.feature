@@ -21,5 +21,8 @@ Scenario: Add a comment
  Then I should see "Wauw, wat een pareltje, lekkur!"
  And I should see "Mr. T"
  And I should see "Bruggen bouwen, zoals echt bevers doen"
-
+ When I follow "Privacy Statement"
+ Then I should see "Ingrijpen bij reacties"
+ When I follow "Zuruck jawohl!"
+ Then I should see "The Stories"
 

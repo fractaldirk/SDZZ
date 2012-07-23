@@ -1,11 +1,15 @@
 SDZZ::Application.routes.draw do
+  
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
+  get 'stories/privacystatement' 
+
   resources :stories do
   	resources :storycomments
   end
 
-  match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
-  match 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :posts do
   	resources :comments

@@ -15,11 +15,11 @@
 <h2>Gevatte opmerkingen</h2>
 <%= render @story.storycomments %>
 
-<h2>Deel je intellectuele hoogstandje:</h2>
+<h3>Deel je intellectuele hoogstandje:</h3>
 <%= render 'storycomments/form' %>
 
 <br />
 
 
 <%= link_to 'Eventjes wijzigen', edit_story_path(@story) %> |
-<%= link_to 'Zuruck jawohl!', stories_path %>
+<%= link_to 'Zuruck jawohl!', stories_path %>|<%= link_to 'Privacy Statement', stories_privacystatement %>
