@@ -1,0 +1,15 @@
+<p>
+  <b>Commenter:</b>
+  <%= storycomment.commenter %>
+</p>
+ 
+<p>
+  <b>Comment:</b>
+  <%= storycomment.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Comment', [storycomment.story, storycomment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

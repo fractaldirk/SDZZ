@@ -12,7 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :title, "Titel" %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Achtergrond Story" %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
@@ -23,6 +27,6 @@
     <%= f.text_field :remote_image_url %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Plaats die story!" %>
   </div>
 <% end %>

@@ -1,0 +1,2 @@
+module StorycommentsHelper
+end

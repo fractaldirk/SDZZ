@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120722104725) do
+ActiveRecord::Schema.define(:version => 20120723101948) do
 
   create_table "agendas", :force => true do |t|
     t.text     "date"
@@ -62,7 +62,18 @@ ActiveRecord::Schema.define(:version => 20120722104725) do
     t.string   "image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "title"
   end
+
+  create_table "storycomments", :force => true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "story_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "storycomments", ["story_id"], :name => "index_storycomments_on_story_id"
 
   create_table "users", :force => true do |t|
     t.string   "provider"

@@ -1,5 +1,7 @@
 SDZZ::Application.routes.draw do
-  resources :stories
+  resources :stories do
+  	resources :storycomments
+  end
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')

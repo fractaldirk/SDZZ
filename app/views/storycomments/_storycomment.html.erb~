@@ -1,0 +1,9 @@
+<p>
+  <b>Commenter:</b>
+  <%= storycomment.commenter %>
+</p>
+ 
+<p>
+  <b>Comment:</b>
+  <%= storycomment.body %>
+</p>

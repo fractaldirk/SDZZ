@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<h1><%= @story.title %></h1>
 <p>
-  <b>Description:</b>
+  <b>Achtergrond Story:</b>
   <%= @story.description %>
 </p>
 
@@ -12,6 +12,14 @@
   </center>
 </p>
 
+<h2>Gevatte opmerkingen</h2>
+<%= render @story.storycomments %>
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<h3>Deel je intellectuele hoogstandje:</h3>
+<%= render 'storycomments/form' %>
+
+<br />
+
+
+<%= link_to 'Eventjes wijzigen', edit_story_path(@story) %> |
+<%= link_to 'Zuruck jawohl!', stories_path %>
