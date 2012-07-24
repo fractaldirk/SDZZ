@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     if current_user
     	User.delay.share_review(current_user.id, post_url(@post))
     end
-    redirect_to post_path(@post), notice: "Lekkur! Je komment is geplaatst."
+    redirect_to post_path(@post), notice: "Gewoon dikke prima!"
   end
 
   def destroy

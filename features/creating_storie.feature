@@ -21,7 +21,8 @@ Scenario: Creating a Story
   When I follow "Eventjes wijzigen"
   And I fill in "Titel" with "De fitte bever"
   And I press "Plaats die story!"
-  Then I should see "De fitte bever"
+  Then I should see "Schitterend!"
+  And I should see "De fitte bever"
   When I follow "Zuruck jawohl!"
   Then I should see "De fitte bever"
 
