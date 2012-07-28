@@ -1,0 +1,2 @@
+module LeaguetablesHelper
+end

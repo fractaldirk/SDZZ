@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Club name:</b>
+  <%= @leaguetable.club_name %>
+</p>
+
+<p>
+  <b>Club:</b>
+  <%= @leaguetable.club_id %>
+</p>
+
+<p>
+  <b>Matches played:</b>
+  <%= @leaguetable.matches_played %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @leaguetable.points %>
+</p>
+
+<p>
+  <b>Wins:</b>
+  <%= @leaguetable.wins %>
+</p>
+
+<p>
+  <b>Draws:</b>
+  <%= @leaguetable.draws %>
+</p>
+
+<p>
+  <b>Losses:</b>
+  <%= @leaguetable.losses %>
+</p>
+
+<p>
+  <b>Goals for:</b>
+  <%= @leaguetable.goals_for %>
+</p>
+
+<p>
+  <b>Goals against:</b>
+  <%= @leaguetable.goals_against %>
+</p>
+
+<p>
+  <b>Penalty points:</b>
+  <%= @leaguetable.penalty_points %>
+</p>
+
+
+<%= link_to 'Edit', edit_leaguetable_path(@leaguetable) %> |
+<%= link_to 'Back', leaguetables_path %>

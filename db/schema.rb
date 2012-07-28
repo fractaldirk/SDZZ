@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723101948) do
+ActiveRecord::Schema.define(:version => 20120728114056) do
 
   create_table "agendas", :force => true do |t|
     t.text     "date"
@@ -48,6 +48,21 @@ ActiveRecord::Schema.define(:version => 20120723101948) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "leaguetables", :force => true do |t|
+    t.string   "club_name"
+    t.integer  "club_id"
+    t.integer  "matches_played"
+    t.integer  "points"
+    t.integer  "wins"
+    t.integer  "draws"
+    t.integer  "losses"
+    t.integer  "goals_for"
+    t.integer  "goals_against"
+    t.integer  "penalty_points"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"

@@ -1,0 +1,57 @@
+<%= form_for(@leaguetable) do |f| %>
+  <% if @leaguetable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leaguetable.errors.count, "error") %> prohibited this leaguetable from being saved:</h2>
+
+      <ul>
+      <% @leaguetable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :club_name %><br />
+    <%= f.text_field :club_name %>
+  </div>
+  <div class="field">
+    <%= f.label :club_id %><br />
+    <%= f.number_field :club_id %>
+  </div>
+  <div class="field">
+    <%= f.label :matches_played %><br />
+    <%= f.number_field :matches_played %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br />
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br />
+    <%= f.number_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :draws %><br />
+    <%= f.number_field :draws %>
+  </div>
+  <div class="field">
+    <%= f.label :losses %><br />
+    <%= f.number_field :losses %>
+  </div>
+  <div class="field">
+    <%= f.label :goals_for %><br />
+    <%= f.number_field :goals_for %>
+  </div>
+  <div class="field">
+    <%= f.label :goals_against %><br />
+    <%= f.number_field :goals_against %>
+  </div>
+  <div class="field">
+    <%= f.label :penalty_points %><br />
+    <%= f.number_field :penalty_points %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<h1>Listing leaguetables</h1>
+
+<table border="1">
+  <tr>
+    <th width="200pt" align="left">Club name</th>
+    <th>Gespeeld</th>
+    <th width="75pt" align="center">Winst</th>
+    <th width="75pt" align="center">Gelijk</th>
+    <th width="75pt" align="center">Verlies</th>
+    <th width="75pt" align="center">Voor</th>
+    <th width="75pt" align="center">Tegen</th>
+    <th width="75pt" align="center">Doelsaldo</th>
+    <th width="75pt" align="center">Punten</th>
+    <th width="75pt" align="center">Strafpunten</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @leaguetables.each do |leaguetable| %>
+  <tr>
+    <td><b><%= leaguetable.club_name %><b></td>
+    <td align="center"><%= leaguetable.matches_played %></td>
+    <td align="center"><%= leaguetable.wins %></td>
+    <td align="center"><%= leaguetable.draws %></td>
+    <td align="center"><%= leaguetable.losses %></td>
+    <td align="center"><%= leaguetable.goals_for %></td>
+    <td align="center"><%= leaguetable.goals_against %></td>
+    <td align="center"><%= leaguetable.goal_difference %></td>
+    <td align="center"><b><%= leaguetable.pointz %></b></td>
+    <td align="center"><%= leaguetable.penalty_points %></td>
+    <td align="center"><%= link_to 'Show', leaguetable %></td>
+    <td align="center"><%= link_to 'Edit', edit_leaguetable_path(leaguetable) %></td>
+    <td align="center"><%= link_to 'Destroy', leaguetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Leaguetable', new_leaguetable_path %>
